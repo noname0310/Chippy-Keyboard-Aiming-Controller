@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChippyController", "ChippyController\ChippyController.csproj", "{159DE41B-2C70-4C04-8860-796376EFDB3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{159DE41B-2C70-4C04-8860-796376EFDB3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159DE41B-2C70-4C04-8860-796376EFDB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159DE41B-2C70-4C04-8860-796376EFDB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159DE41B-2C70-4C04-8860-796376EFDB3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4A8AB85-99D8-4439-BF8C-422FBF0D5BC4}
+	EndGlobalSection
+EndGlobal
