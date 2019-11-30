@@ -55,7 +55,7 @@ namespace ChippyController
                 Rotation += Sensitivty;
             }
 
-            Cursor.Position = new Point((int)(ScreenCenter.X + (ScreenCenter.Y * Math.Cos(Rotation.GetValue() / 57))), (int)(ScreenCenter.Y + (ScreenCenter.Y * Math.Sin(Rotation.GetValue() / 57))));
+            Cursor.Position = new Point((int)(ScreenCenter.X + (ScreenCenter.Y * Math.Cos(Rotation.GetValue() * Math.PI / 180))), (int)(ScreenCenter.Y + (ScreenCenter.Y * Math.Sin(Rotation.GetValue() * Math.PI / 180))));
         }
 
         private static void CurrentDomain_ProcessExit(object sender, EventArgs e)
