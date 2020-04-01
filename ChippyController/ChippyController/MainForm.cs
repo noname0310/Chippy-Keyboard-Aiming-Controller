@@ -13,7 +13,8 @@ namespace ChippyController
 {
     public partial class MainForm : Form
     {
-        private const int Sensitivty = 10;
+        private const float Sensitivty = 22.5F;
+        private float radius;
 
         private int ScreenWidth;
         private int ScreenHeight;
@@ -30,6 +31,8 @@ namespace ChippyController
             ScreenWidth = Screen.PrimaryScreen.Bounds.Width;
             ScreenHeight = Screen.PrimaryScreen.Bounds.Height;
             ScreenCenter = new PointF(ScreenWidth / 2.0f, ScreenHeight / 2.0f);
+
+            radius = (float)Math.Sqrt(ScreenCenter.X * ScreenCenter.X + ScreenCenter.Y * ScreenCenter.Y);
 
             Counter = 0;
             Rotation = new Rotation(0);
@@ -55,7 +58,7 @@ namespace ChippyController
                 Rotation += Sensitivty;
             }
 
-            Cursor.Position = new Point((int)(ScreenCenter.X + (ScreenCenter.Y * Math.Cos(Rotation.GetValue() * Math.PI / 180))), (int)(ScreenCenter.Y + (ScreenCenter.Y * Math.Sin(Rotation.GetValue() * Math.PI / 180))));
+            Cursor.Position = new Point((int)(ScreenCenter.X + (radius * Math.Cos(Rotation.GetValue() * Math.PI / 180))), (int)(ScreenCenter.Y + (radius * Math.Sin(Rotation.GetValue() * Math.PI / 180))));
         }
 
         private static void CurrentDomain_ProcessExit(object sender, EventArgs e)
