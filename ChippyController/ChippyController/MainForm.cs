@@ -27,8 +27,8 @@ namespace ChippyController
             InitializeComponent();
             AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit;
 
-            ScreenWidth = SystemInformation.VirtualScreen.Width;
-            ScreenHeight = SystemInformation.VirtualScreen.Height;
+            ScreenWidth = Screen.PrimaryScreen.Bounds.Width;
+            ScreenHeight = Screen.PrimaryScreen.Bounds.Height;
             ScreenCenter = new PointF(ScreenWidth / 2.0f, ScreenHeight / 2.0f);
 
             Counter = 0;
